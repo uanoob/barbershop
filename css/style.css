@@ -54,6 +54,11 @@ a {
   margin-bottom: 75px;
 }
 
+.inner-page .main-header {
+  margin-bottom: 50px;
+  background-color: #000000;
+}
+
 .main-navigation {
   display: flex;
   flex-direction: column;
@@ -64,11 +69,23 @@ a {
   color: #ffffff;
 }
 
+.inner-page .main-navigation {
+  flex-direction: row;
+  align-items: start;
+}
+
 .main-header-logo {
   border: 1px solid burlywood;
   order: 2;
   width: 368px;
   height: 153px;
+}
+
+.inner-page .main-header-logo {
+  order: 0;
+  width: 111px;
+  height: 24px;
+  padding: 23px 20px;
 }
 
 .main-navigation__wrapper {
@@ -96,6 +113,10 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.inner-page .user-navigation {
+  margin-left: auto;
 }
 
 .site-navigation a,
@@ -196,11 +217,19 @@ a {
 }
 
 .page-title {
+  border: 1px solid burlywood;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
   font-size: 30px;
   line-height: 42px;
 }
 
 .breadcrumbs {
+  border: 1px solid orange;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
   list-style: none;
 }
 
@@ -217,13 +246,28 @@ a {
   color: #aba9a7;
 }
 
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  border: 1px solid orange;
+  width: 180px;
+}
+
 .filter fieldset {
   border: none;
 }
 
 .filter legend {
+  border: 1px solid burlywood;
   font-size: 24px;
   line-height: 30px;
+}
+
+.filter-option {
+  border: 1px solid burlywood;
 }
 
 .filter ul {
@@ -241,13 +285,31 @@ a {
   opacity: 0.5;
 }
 
+.catalog {
+  border: 1px solid orange;
+  width: 700px;
+}
+
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
   list-style: none;
 }
 
 .catalog-item {
+  /* border: 1px solid orange; */
+  width: 220px;
+  margin-bottom: 20px;
+  margin-right: 20px;
   background-color: #f7f7f7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .catalog-item:hover {
@@ -280,6 +342,9 @@ a {
 }
 
 .pagination-list {
+  border: 1px solid orange;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -337,6 +402,10 @@ a {
   list-style: none;
 }
 
+.page-title {
+
+}
+
 .main-footer {
   border: 1px solid orange;
   padding: 60px 0;
@@ -347,6 +416,10 @@ a {
   background-image: url(/img/pattern-dark.jpg);
   background-position: 0 0;
   background-repeat: repeat;
+}
+
+.inner-page .main-footer {
+  margin-top: 45px;
 }
 
 .main-footer .container {
