@@ -42,15 +42,59 @@ a {
   background-color: #663d15;
 }
 
+.container {
+  border: 1px solid orange;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-header {
+  border: 1px solid orange;
+  margin-bottom: 75px;
+}
+
 .main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+}
+
+.main-header-logo {
+  border: 1px solid burlywood;
+  order: 2;
+  width: 368px;
+  height: 153px;
+}
+
+.main-navigation__wrapper {
+  border: 1px solid pink;
+  width: 100%;
+  margin-bottom: 60px;
   background-color: #000000;
 }
 
-.site-navigation,
+.main-navigation__wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-navigation {
+  border: 1px solid burlywood;
+  width: 620px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .user-navigation {
+  border: 1px solid burlywood;
+  width: 140px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -66,12 +110,22 @@ a {
   background-color: #242424;
 }
 
+.features {
+  margin-bottom: 80px;
+}
+
 .features-list {
+  border: 1px solid greenyellow;
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
   color: #f7f4f1;
 }
 
 .feature-item {
+  border: 1px solid burlywood;
+  width: 300px;
   text-align: center;
 }
 
@@ -81,6 +135,11 @@ a {
 }
 
 .index-column {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 80px;
+  margin-bottom: 35px;
   color: #000000;
   background-color: #f7f4f1;
   background-image: url(/img/pattern-light.jpg);
@@ -93,6 +152,11 @@ a {
   line-height: 42px;
 }
 
+.news {
+  border: 1px solid burlywood;
+  width: 380px;
+}
+
 .news-list {
   list-style: none;
 }
@@ -101,9 +165,24 @@ a {
   text-transform: none;
 }
 
+.gallery {
+  border: 1px solid burlywood;
+  width: 300px;
+}
+
 .gallery-content {
   background-color: #e5e5e5;
   border: 7px solid #ffffff;
+}
+
+.contacts {
+  border: 1px solid burlywood;
+  width: 380px;
+}
+
+.appointment {
+  border: 1px solid burlywood;
+  width: 300px;
 }
 
 .appointment-item input {
@@ -259,12 +338,26 @@ a {
 }
 
 .main-footer {
+  border: 1px solid orange;
+  padding: 60px 0;
+  margin-top: 65px;
   color: #ffffff;
 
   background-color: #202020;
   background-image: url(/img/pattern-dark.jpg);
   background-position: 0 0;
   background-repeat: repeat;
+}
+
+.main-footer .container {
+  display: flex;
+}
+
+.footer-contacts {
+  border: 1px solid burlywood;
+  margin: 0;
+  margin-right: 80px;
+  width: 320px;
 }
 
 .footer-contacts a {
@@ -274,7 +367,9 @@ a {
 }
 
 .footer-social {
+  border: 1px solid burlywood;
   text-align: center;
+  width: 145px;
 }
 
 .footer-social ul {
@@ -286,7 +381,11 @@ a {
 }
 
 .footer-copyright {
+  border: 1px solid burlywood;
+  margin: 0;
+  margin-left: auto;
   text-align: center;
+  width: 150px;
 }
 
 .footer-copyright .button:hover,
