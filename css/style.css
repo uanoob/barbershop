@@ -371,15 +371,22 @@ a {
   background-color: #ffffff;
 }
 
+.product-photos {
+  border: 1px solid red;
+  width: 460px;
+}
+
 .product-photo__preview {
   list-style: none;
 }
 
 .product-photo__preview li {
+  border: 1px solid burlywood;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .product-photo__full {
+  border: 1px solid burlywood;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -393,17 +400,19 @@ a {
   background-color: #aeaeae;
 }
 
+.product-info {
+  border: 1px solid red;
+  width: 390px;
+}
+
 .product-info h3 {
   font-size: 24px;
   line-height: 30px;
 }
 
 .product-info ul {
+  border: 1px solid burlywood;
   list-style: none;
-}
-
-.page-title {
-
 }
 
 .main-footer {
