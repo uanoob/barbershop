@@ -535,47 +535,118 @@ input[type="radio"].visually-hidden {
 }
 
 .product-photos {
-  border: 1px solid red;
+  background-color: rgba(212, 124, 24, 0.3);
   width: 460px;
 }
 
 .product-photo__preview {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .product-photo__preview li {
   background-color: rgba(212, 124, 24, 0.3);
+  width: 140px;
+  height: 149px;
+  margin-right: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-photo__preview li:nth-child(3n) {
+  margin-right: 0;
 }
 
 .product-photo__full {
   background-color: rgba(212, 124, 24, 0.3);
+  width: 460px;
+  height: 498px;
+  margin: 0;
+  margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.product-articul {
-  text-align: right;
-  color: #aeaeae;
-}
-
-.product-price b {
-  text-align: center;
-  background-color: #aeaeae;
-}
-
 .product-info {
-  border: 1px solid red;
+  background-color: rgba(212, 124, 24, 0.3);
   width: 390px;
+  padding-top: 23px;
+}
+
+.product-info p {
+  margin: 0;
 }
 
 .product-info h3 {
+  margin: 0;
+  margin-bottom: 27px;
   font-size: 24px;
   line-height: 30px;
 }
 
+.product-info .product-text {
+  margin-bottom: 35px;
+}
+
+.product-description {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10px;
+  margin-bottom: 29px;
+}
+
+.product-description p {
+  width: 200px;
+}
+
+.product-article {
+  text-align: right;
+  color: #aeaeae;
+}
+
+.product-info .product-price {
+  display: flex;
+  margin-bottom: 63px;
+}
+
+.product-price b {
+  width: 112px;
+  padding-top: 13px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-bottom: 11px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #aeaeae;
+  box-sizing: border-box;
+}
+
+.product-price .button {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
 .product-info ul {
   background-color: rgba(212, 124, 24, 0.3);
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.product-info li {
+  position: relative;
+  padding-left: 23px;
+}
+
+.product-info li::before {
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  transform: rotate(45deg);
 }
 
 .main-footer {
