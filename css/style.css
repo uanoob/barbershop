@@ -130,21 +130,22 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
 }
 
-.site-navigation {
+.site-navigation,
+.user-navigation {
   background-color: rgba(212, 124, 24, 0.3);
-  display: flex;
-  flex-wrap: wrap;
-  width: 620px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
+.site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 620px;
+}
 .user-navigation {
-  background-color: rgba(212, 124, 24, 0.3);
+  display: flex;
   width: 140px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .inner-page .user-navigation {
@@ -154,7 +155,7 @@ input[type="radio"].visually-hidden {
 .site-navigation a,
 .user-navigation a {
   display: block;
-  margin: 25px 20px;
+  padding: 25px 20px;
   color: #ffffff;
 }
 
@@ -390,10 +391,33 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs {
   background-color: rgba(212, 124, 24, 0.3);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 50px;
   padding: 0;
   list-style: none;
+}
+
+.breadcrumbs li {
+  position: relative;
+  margin-right: 42px;
+}
+
+.breadcrumbs li::after {
+  position: absolute;
+  right: -25px;
+  top: 7px;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+
+.breadcrumbs li:last-child {
+  margin-right: 0;
 }
 
 .breadcrumbs a {
@@ -409,6 +433,10 @@ input[type="radio"].visually-hidden {
   color: #aba9a7;
 }
 
+.breadcrumbs-current::after {
+  display: none;
+}
+
 .catalog-columns {
   display: flex;
   justify-content: space-between;
@@ -420,22 +448,85 @@ input[type="radio"].visually-hidden {
 }
 
 .filter fieldset {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
   border: none;
+}
+
+.filter fieldset:first-child {
+  margin-bottom: 35px;
 }
 
 .filter legend {
   background-color: rgba(212, 124, 24, 0.3);
+  margin-bottom: 26px;
   font-size: 24px;
   line-height: 30px;
 }
 
 .filter-option {
   background-color: rgba(212, 124, 24, 0.3);
+  margin-bottom: 19px;
+  padding-left: 45px;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
 }
 
 .filter ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
   line-height: 18px;
+}
+
+.filter-input__checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -42px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+}
+
+.filter-input__checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -38px;
+  width: 12px;
+  height: 12px;
+  background-image: url(/img/cross.svg);
+  position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.filter-input__radio + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: -1px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.filter-input__radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -36px;
+  width: 8px;
+  height: 8px;
+  background-color: #f7f4f1;
+  border-radius: 50%;
 }
 
 .filter input:hover + label,
@@ -480,19 +571,41 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item a {
+  display: flex;
+  flex-direction: column;
   color: #000000;
 }
 
 .catalog-item h3 {
+  order: 1;
+  margin-top: 17px;
+  margin-bottom: 12px;
+  margin-left: 16px;
+  margin-right: 15px;
   font-size: 14px;
   line-height: 18px;
 }
 
 .catalog-category {
+  display: block;
   text-transform: none;
 }
 
+.catalog-item__image {
+  width: 220px;
+  height: 165px;
+  margin: 0;
+}
+
+.catalog-item__price {
+  display: flex;
+  margin: 15px;
+  margin-top: 0;
+}
+
 .catalog-item__price b {
+  width: 112px;
+  padding: 13px 25px 11px;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -500,18 +613,33 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item__price .button {
+  width: 50px;
+  padding: 13px 18px 11px;
+  margin-right: 0;
   color: #ffffff;
   line-height: 20px;
 }
 
 .pagination-list {
   background-color: rgba(212, 124, 24, 0.3);
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.pagination-item {
+  margin-right: 5px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
+}
+
 .pagination-item a {
+  display: block;
+  padding: 10px 19px;
   color: #ffffff;
   background-color: #000000;
 }
